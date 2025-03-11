@@ -1,0 +1,21 @@
+<h1>רשימת שיעורים</h1>
+
+
+<div>
+    @if(lessons.length > 0)
+    {
+       @for(l of lessons; track l.title)
+       {
+        <h2>lesson: {{l.title}}</h2>
+       }
+    }
+    @else {
+        no lessons
+    }
+</div>
+<button mat-raised-button class="bt" color="primary" (click)="AddLesson()">
+    add lesson
+</button>
+<ng-template #noLessons>
+    <p>No lessons found for this course.</p>
+</ng-template>

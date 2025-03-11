@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+/* עיצוב מרכזי של הכפתורים */
+.button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    gap: 15px;
+}
+
+/* עיצוב הכפתורים */
+.bt {
+    background-color: #4FC3F7 !important; /* צבע תכלת */
+    color: white !important;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+/* אפקט מעבר על הכפתורים */
+.bt:hover {
+    background-color: #039BE5 !important; /* תכלת כהה יותר */
+    transform: scale(1.05);
+}
+
+/* אפקט לחיצה */
+.bt:active {
+    transform: scale(0.98);
+}
+
+/* כפתור בפוקוס */
+.bt:focus {
+    outline: 2px solid #0288D1;
+}
+
+/* עיצוב כללי לעמוד */
+body {
+    font-family: "Heebo", sans-serif;
+    background-color: #c7f2f7;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
