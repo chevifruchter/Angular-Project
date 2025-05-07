@@ -36,7 +36,7 @@ export class UserServiceService {
     )
   }
   signUp(name: string, email: string, password: string, role: string): Observable<any> {
-    alert("service")
+   
     const user = { name, email, password, role }
     console.log(user)
     return this.http.post(`${this.baseUrl}register `, user).pipe(
