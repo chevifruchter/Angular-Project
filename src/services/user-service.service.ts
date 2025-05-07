@@ -20,7 +20,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class UserServiceService {
-  private baseUrl = 'http://localhost:3000/api/auth/';
+  private baseUrl = 'https://angular-project-k9ux.onrender.com/api/auth/';
   constructor(private http: HttpClient) { }
   Login(email: string, password: string): Observable<any> {
     const user = { email, password }

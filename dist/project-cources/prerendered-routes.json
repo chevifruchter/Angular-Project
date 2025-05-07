@@ -1,0 +1,10 @@
+{
+  "routes": [
+    "/GetCourses",
+    "/GetLessons",
+    "/Login",
+    "/NewCourses",
+    "/NewLesson",
+    "/Register"
+  ]
+}

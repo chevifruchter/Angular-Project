@@ -9,7 +9,7 @@ import {course} from '../models/cource';
   providedIn: 'root'
 })
 export class GetCoursesService {
-  private baseUrl = 'http://localhost:3000/api/courses'; // כתובת ה-API שלך
+  private baseUrl = 'https://angular-project-k9ux.onrender.com/api/courses'; // כתובת ה-API שלך
 
   constructor(private http: HttpClient) {}
 
@@ -54,7 +54,7 @@ putCoursr(title:string,description:string,teacherId:string|null,token:string,id:
     'Authorization': `Bearer ${token}` // הוספת הטוקן לכותרת
   });
   const course={title,description,teacherId}
-  return this.http.put<course>(`http://localhost:3000/api/courses/:${id} `,course,{headers})
+  return this.http.put<course>(`https://angular-project-k9ux.onrender.com/api/courses/:${id} `,course,{headers})
 }
 
 putLesson(title: string, content: string, courseId: number, token: string, lessonId: number): Observable<any> {

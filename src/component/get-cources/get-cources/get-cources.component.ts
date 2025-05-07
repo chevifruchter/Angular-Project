@@ -35,7 +35,7 @@ delete(id:number|undefined){
     'Authorization': `Bearer ${this.token}`
   });
 
-  this.http.delete(`http://localhost:3000/api/courses/${id}`, { headers })
+  this.http.delete(`https://angular-project-k9ux.onrender.com/api/courses/${id}`, { headers })
     .subscribe(
       (response) => {
         console.log('Course deleted successfully', response);
@@ -67,7 +67,7 @@ showLesson(course: any) {
       'Authorization': `Bearer ${this.token}`
     });
     const userId: string|null=localStorage.getItem('userId')
-    this.http.post<user>(`http://localhost:3000/api/courses/:${c.id}/enroll`,{userId},{headers})
+    this.http.post<user>(`https://angular-project-k9ux.onrender.com/api/courses/:${c.id}/enroll`,{userId},{headers})
     .subscribe(
       (response) => {
         console.log('the  user join successfully', response);
@@ -84,7 +84,7 @@ showLesson(course: any) {
       'Authorization': `Bearer ${this.token}`
     });
     const userId: string|null=localStorage.getItem('userId')
-    this.http.delete<user>(`http://localhost:3000/api/courses/:${c.id}/unenroll`, {
+    this.http.delete<user>(`https://angular-project-k9ux.onrender.com/api/courses/:${c.id}/unenroll`, {
       headers,
       body: { userId } // הוספת userId לגוף הבקשה
   })
